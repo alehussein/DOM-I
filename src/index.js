@@ -40,3 +40,58 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images["logo-img"]
+
+const catImg = document.querySelector('#cta-img')
+catImg.src = siteContent.images['cta-img']
+
+const accentImg = document.querySelector('#middle-img')
+accentImg.src = siteContent.images['accent-img']
+
+//Footer
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+//contact
+const contacts = document.querySelector('section.contact')
+contacts.children[0].textContent = siteContent.contact['contact-h4']
+contacts.children[1].textContent = siteContent.contact['address']
+contacts.children[2].textContent = siteContent.contact['phone']
+contacts.children[3].textContent = siteContent.contact['email']
+
+//main-content
+
+const topcontent = document.querySelector('.top-content')
+topcontent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+topcontent.children[0].children[1].textContent = siteContent["main-content"]["features-content"]
+topcontent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+topcontent.children[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+const buttoncontent = document.querySelector('.bottom-content')
+buttoncontent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+buttoncontent.children[0].children[1].textContent = siteContent["main-content"]["services-content"]
+buttoncontent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+buttoncontent.children[1].children[1].textContent = siteContent["main-content"]["product-content"]
+buttoncontent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+buttoncontent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+
+// cta
+
+const ctaSection = document.querySelector('.cta-text')
+ctaSection.children[0].textContent = siteContent.cta.h1
+ctaSection.children[1].textContent = siteContent.cta.button
+
+//nav 
+
+const navlinks = document.querySelectorAll('header nav a')
+const navlinkstext = Object.values(siteContent.nav)
+navlinks.forEach((link, idx) => {
+  link.textContent = navlinkstext[idx]
+  link.classList.add('italic')
+})
+
+
